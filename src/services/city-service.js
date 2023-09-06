@@ -5,9 +5,9 @@ class CityService {
     this.cityRepository = new CityRepository();
   }
   async createCity(data) {
-    const city = await this.cityRepository.createCity(data);
-    return city;
     try {
+      const city = await this.cityRepository.createCity(data);
+      return city;
     } catch (error) {
       console.log("somthing went wrong at the servise layer");
       throw { error };
@@ -15,9 +15,9 @@ class CityService {
   }
 
   async deleteCity(cityId) {
-    const response = await this.cityRepository.deleteCity(cityId);
-    return response;
     try {
+      const response = await this.cityRepository.deleteCity(cityId);
+      return response;
     } catch (error) {
       console.log("somthing went wrong at the servise layer");
       throw { error };
@@ -25,18 +25,18 @@ class CityService {
   }
 
   async updateCity(cityId, data) {
-    const city = await this.cityRepository.updateCity(cityId, data);
-    return city;
     try {
+      const city = await this.cityRepository.updateCity(cityId, data);
+      return city;
     } catch (error) {
       console.log("somthing went wrong at the servise layer");
       throw { error };
     }
   }
   async getCity(cityId) {
-    const city = await this.cityRepositor.getCity(cityId);
-    return city;
     try {
+      const city = await this.cityRepositor.getCity(cityId);
+      return city;
     } catch (error) {
       console.log("somthing went wrong at the servise layer");
       throw { error };
